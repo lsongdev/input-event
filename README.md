@@ -2,7 +2,7 @@
 
 read and parse input device(like mouse, keyboard and IR-Remote)'s event data
 
-see also: https://www.kernel.org/doc/Documentation/input/input.txt
+see also: https://www.kernel.org/doc/Documentation/input
 
 ### Installation
 ````
@@ -22,6 +22,13 @@ keyboard.on('keydown' , console.log);
 keyboard.on('keypress', console.log);
 
 ````
+
+### TODO
+
++ [x] Keyboard
++ [x] Mouse
++ [x] IR-Remote
++ [ ] JoyStick
 
 ### API
 check this file: `index.js`
