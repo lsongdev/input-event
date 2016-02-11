@@ -12,6 +12,9 @@ const KEY_STATUS = {
  * @param {[type]} device [description]
  */
 function Keyboard(device){
+  if( !(this instanceof InputEvent) ){
+    device = new InputEvent(device);
+  }
   var self = this;
   events.EventEmitter.call(this);
   this.device = device;

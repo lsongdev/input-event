@@ -1,22 +1,25 @@
 ## input-event ![npm](https://badge.fury.io/js/input-event.png)
 
-parse input device&#39;s event data
+read and parse input device(like mouse, keyboard and IR-Remote)'s event data
+
+see also: https://www.kernel.org/doc/Documentation/input/input.txt
 
 ### Installation
 ````
-$ [sudo] npm install input-event --save
+$ npm install input-event --save
 ````
-
 
 ### Example
 ````javascript
-const InputEvent = require('input-event');
+var InputEvent = require('input-event');
 
 var input = new InputEvent('/dev/input/event0');
 
-input.on('data', function(ev){
-  console.log(ev);
-});
+var keyboard = new InputEvent.Keyboard(input);
+
+keyboard.on('keyup'   , console.log);
+keyboard.on('keydown' , console.log);
+keyboard.on('keypress', console.log);
 
 ````
 

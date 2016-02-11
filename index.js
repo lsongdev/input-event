@@ -32,6 +32,11 @@ function InputEvent(device, options){
   this.fd.on('data', this.process.bind(this));
 }
 /**
+ * [exports InputEvent]
+ * @type {[type]}
+ */
+module.exports = exports = InputEvent;
+/**
  * [inherits EventEmitter]
  */
 util.inherits(InputEvent, events.EventEmitter);
@@ -73,8 +78,3 @@ InputEvent.prototype.close = function(callback){
 InputEvent.EVENT_TYPES = EVENT_TYPES;
 InputEvent.Mouse    = require('./mouse');
 InputEvent.Keyboard = require('./keyboard');
-/**
- * [exports InputEvent]
- * @type {[type]}
- */
-module.exports = InputEvent;
