@@ -28,7 +28,7 @@ keyboard.on('keypress', console.log);
 + [x] Keyboard
 + [x] Mouse
 + [x] IR-Remote
-+ [ ] JoyStick
++ [X] JoyStick
 
 ### API
 check this file: `index.js`
