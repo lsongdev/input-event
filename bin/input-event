@@ -1,3 +1,5 @@
 #!/usr/bin/env node
 
-new (require('../'))(process.argv[2]).on('data', console.log);
+new (require('..'))(
+  process.argv[2]
+).on('data', console.log);
