@@ -11,11 +11,11 @@ $ npm install input-event --save
 
 ### Example
 ````javascript
-var InputEvent = require('input-event');
+const InputEvent = require('input-event');
 
-var input = new InputEvent('/dev/input/event0');
+const input = new InputEvent('/dev/input/event0');
 
-var keyboard = new InputEvent.Keyboard(input);
+const keyboard = new InputEvent.Keyboard(input);
 
 keyboard.on('keyup'   , console.log);
 keyboard.on('keydown' , console.log);
@@ -32,6 +32,10 @@ keyboard.on('keypress', console.log);
 
 ### API
 check this file: `index.js`
+
+### Showcase
+
+![](./example/ir-remote.jpg)
 
 ### Contributing
 - Fork this repo

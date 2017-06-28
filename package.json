@@ -6,9 +6,6 @@
   "directories": {
     "test": "test"
   },
-  "scripts": {
-    "test": "node test/test.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/song940/input-event.git"
