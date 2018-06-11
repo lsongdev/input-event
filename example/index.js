@@ -1,16 +1,16 @@
 const InputEvent = require('../');
 
-const input = new InputEvent('/dev/input/event6');
+const input = new InputEvent('/dev/input/event0');
 //const input = new InputEvent('/dev/input/mice');
 //
 // input.on('data', function(buffer){
 //   console.log(buffer);
 // });
 
-const keyboard = new InputEvent.Keyboard(input);
+// const keyboard = new InputEvent.Keyboard(input);
 // keyboard.on('data'    , console.log);
-keyboard.on('keyup'   , console.log);
-keyboard.on('keydown' , console.log);
+// keyboard.on('keyup'   , console.log);
+// keyboard.on('keydown' , console.log);
 // keyboard.on('keypress', console.log);
 
 //const mouse = new InputEvent.Mouse(input);
@@ -27,3 +27,7 @@ keyboard.on('keydown' , console.log);
 // joystick.on('keyup'   , console.log);
 // joystick.on('keydown' , console.log);
 // joystick.on('keypress', console.log);
+
+const rotary = new InputEvent.Rotary(input);
+rotary.on('left'  , ev => console.log('left',  ev));
+rotary.on('right' , ev => console.log('right', ev));
