@@ -29,6 +29,7 @@ keyboard.on('keypress', console.log);
 + [x] Mouse
 + [x] IR-Remote
 + [X] JoyStick
++ [X] Rotary (eg. KY040)
 
 ### API
 check this file: `index.js`
