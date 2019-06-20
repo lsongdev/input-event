@@ -1,6 +1,6 @@
 {
   "name": "input-event",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "description": "read and parse input device(like mouse, keyboard and IR-Remote)'s event data",
   "main": "index.js",
   "directories": {
