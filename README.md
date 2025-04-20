@@ -13,14 +13,33 @@ $ npm install input-event --save
 ````javascript
 const InputEvent = require('input-event');
 
-const input = new InputEvent('/dev/input/event0');
-
-const keyboard = new InputEvent.Keyboard(input);
+const keyboardDevice = new InputEvent('/dev/input/event0');
+const keyboard       = new InputEvent.Keyboard(keyboardDevice);
 
 keyboard.on('keyup'   , console.log);
 keyboard.on('keydown' , console.log);
 keyboard.on('keypress', console.log);
 
+const mouseDevice = new InputEvent('/dev/input/mice');
+const mouse       = new InputEvent.Mouse(mouseDevice);
+
+mouse.on('keyup', console.log);
+// { t: button }
+// button: Mouse.BTN_PRIMARY || Mouse.BTN_SECONDARY || Mouse.BTN_TERTIARY
+
+mouse.on('keydown', console.log);
+// { t: button }
+// button: Mouse.BTN_PRIMARY || Mouse.BTN_SECONDARY || Mouse.BTN_TERTIARY
+
+mouse.on('move', console.log);
+// { t: number, x: number, y: number }
+
+mouse.on('wheel', console.log);
+// { time  : number,
+//   number: number, -- JoyStick Axis, REL_WHEEL
+//   type  : number, -- Mouse event
+//   value : number, -- Scroll amount
+// }
 ````
 
 ### TODO
